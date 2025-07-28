@@ -1,0 +1,132 @@
+:root {
+  --primary: #6c5ce7;       /* yumuşak mor */
+  --accent: #00cec9;        /* parlak turkuaz */
+  --background: #f8f4ff;    /* çok açık morumsu */
+  --white: #ffffff;
+  --grey: #dfe6e9;
+  --text: #2d3436;
+  --completed: #b2bec3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, var(--background), var(--white));
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.todo {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 8px 24px rgba(108, 92, 231, 0.2);
+}
+
+h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1.2rem;
+  font-weight: bold;
+}
+
+.input {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.input-field {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--grey);
+  border-radius: 0.5rem 0 0 0.5rem;
+  font-size: 1rem;
+  outline: none;
+  color: var(--text);
+}
+
+.btn {
+  background-color: var(--accent);
+  color: var(--white);
+  border: none;
+  padding: 0 1.2rem;
+  font-size: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #00b5af;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+li {
+  background-color: var(--grey);
+  padding: 0.8rem 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text);
+  transition: 0.3s;
+}
+
+li.done {
+  text-decoration: line-through;
+  color: var(--completed);
+  background-color: #eaeaea;
+}
+
+li button {
+  background: transparent;
+  border: none;
+  color: #d63031;
+  font-weight: bold;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+#deleteButton {
+  background-color: transparent;
+  border: 1px solid var(--accent);
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.4rem;
+  color: var(--accent);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#deleteButton:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text);
+}
