@@ -20,7 +20,7 @@ function startGame() {
 
 function createLetterButtons() {
   lettersDiv.innerHTML = "";
-  for(let i = 65; i <= 90; i++) { // ASCII A-Z
+  for(let i = 65; i <= 90; i++) {
     const btn = document.createElement("button");
     btn.textContent = String.fromCharCode(i);
     btn.addEventListener("click", letterClick);
@@ -55,11 +55,11 @@ function checkWin() {
     messageDiv.textContent = "Congratulations! You won!";
     disableAllButtons();
   }
-}
+} 
 
 function disableAllButtons() {
   const buttons = lettersDiv.querySelectorAll("button");
   buttons.forEach(btn => btn.disabled = true);
 }
-
+ 
 startGame();
