@@ -10,9 +10,9 @@ startButton.addEventListener("click", () => {
       const isSuccess = Math.random() > 0.5;
 
       if (isSuccess) {
-        resolve("🎉 Operation successful!");
+        resolve("Operation successful!");
       } else {
-        reject("❌ Something went wrong.");
+        reject("Something went wrong.");
       }
     }, 2000);
   });
