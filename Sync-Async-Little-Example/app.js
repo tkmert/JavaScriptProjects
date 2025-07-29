@@ -26,3 +26,4 @@ startButton.addEventListener("click", () => {
       outputDiv.textContent = error;
     });
 });
+ 
