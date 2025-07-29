@@ -1,19 +1,31 @@
-let isSuccesful=true;
-
-const promise=new Promise((resolve,reject)=>{
-    setTimeout(()=>{
-        if(isSuccesful){
-            resolve("Succesful")
-        }else{
-            reject("Something went wrong")
-        }
-    },2000)
+function getUser(){
+    return new Promise((resolve,reject)=>{
+     setTimeout(()=>{
+        reject(new Error("User Not Found"))
+     },2000)   
 });
+}
 
-promise
-    .then((message)=>{
-        console.log("then: ",message)
-    })
-    .cath((error)=>{
-        console.log("catch: ",error)
+function getUserAdresses(username){
+    return new Promise((resolve,reject)=>{
+        setTimeout(()=>{
+            reject(new Error("Address Not Found"))
+        
+    },1000);
+});
+}
+
+function getRestaurant(addresses){
+    return new Promise((resolve)=>{
+        setTimeout(() => {
+            resolve(["A restaurant","B restaurant","C restaurant"]);
+        }, 1000);
     });
+}
+
+getUser()
+.then((user)=>getUserAdresses(user.username))
+.then((addresses)=>getRestaurant(addresses))
+.then((openRestaurants)=>document.body.append("Open Restaurants: ",openRestaurants.toString())
+)
+.catch((error)=>console.log(error))
