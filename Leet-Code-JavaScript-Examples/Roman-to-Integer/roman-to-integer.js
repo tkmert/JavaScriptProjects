@@ -7,7 +7,6 @@ const romanMap = {
     'D': 500,
     'M': 1000
 };
-
 var romanToInt = function(s) {
     let total = 0;
 
@@ -22,10 +21,8 @@ var romanToInt = function(s) {
             total += currentVal;
         }
     }
-
     return total;
 };
-
 console.log(romanToInt("III"));      
 console.log(romanToInt("LVIII"));   
 console.log(romanToInt("MCMXCIV"));  
